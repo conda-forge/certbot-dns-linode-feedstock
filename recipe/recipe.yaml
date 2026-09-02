@@ -1,13 +1,12 @@
 context:
-  name: certbot-dns-linode
   version: "5.8.0"
 
 package:
-  name: ${{ name|lower }}
+  name: certbot-dns-linode
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/c/certbot-dns-linode/certbot_dns_linode-${{ version }}.tar.gz
   sha256: 6f8d22e530fe68e28d7d612b8acbd85d34c1f9d77e96032cd4821f56cfc6dda9
 
 build:
@@ -31,7 +30,9 @@ tests:
       imports:
         - certbot_dns_linode
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://certbot.eff.org
