@@ -1,5 +1,5 @@
 context:
-  version: "5.8.0"
+  version: "5.9.0"
 
 package:
   name: certbot-dns-linode
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/c/certbot-dns-linode/certbot_dns_linode-${{ version }}.tar.gz
-  sha256: 6f8d22e530fe68e28d7d612b8acbd85d34c1f9d77e96032cd4821f56cfc6dda9
+  sha256: c3f201ff08a4e8df61c41b6626f79fd894d5492e18771bfb817104a86d306be9
 
 build:
   noarch: python
